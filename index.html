@@ -20,16 +20,32 @@
                 <h1>LOGIN</h1>
                 <div class="textfiel">
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <input type="text" id="usuario" placeholder="Usuário">
                 </div>
                 <div class="textfiel">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" id="senha" placeholder="Senha">
                 </div>
-                <button class="btn-login">LOGIN</button>
+                <button class="btn-login" onclick="validaCampos()">LOGIN</button>
             </div>
         </div>
     </div>
+    <script>
+        function validaCampos()
+        {
+            var usuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+
+            if (!usuario || !senha) 
+            {
+                alert('Por favor, preencha todos os campos.');
+            } 
+            else 
+            {
+                alert('Formulário enviado com sucesso!');
+            }
+        }
+    </script>
 
 </body>
 </html>
